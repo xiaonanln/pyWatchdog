@@ -45,11 +45,10 @@ def reset(name):
 	_watchdogs[name].reset()
 
 
-def loop():
+def check():
 	"""
 	check all watchdogs and make them fail when timeout
 	"""
-	sys.stdout.write('.')
 	for name, watchdog in _watchdogs.iteritems():
 		try:
 			watchdog.check()

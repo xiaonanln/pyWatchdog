@@ -52,7 +52,7 @@ class TestPyWatchdog(unittest.TestCase):
 		endTime = time.time() + duration
 		while time.time() < endTime:
 			time.sleep(tickInterval)
-			pyWatchdog.loop()
+			pyWatchdog.check()
 
 if __name__ == '__main__':
 	unittest.main()
